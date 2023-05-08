@@ -60,44 +60,207 @@ public class unit3_converter_number_to_letters_application {
                     System.out.println("thirteen");
                     break;
                 case 14:
-                    System.out.println("four teen");
+                    System.out.println("fourteen");
                     break;
                 case 15:
-                    System.out.println("five teen");
+                    System.out.println("fiveteen");
                 case 16:
-                    System.out.println("six teen");
+                    System.out.println("sixteen");
                 case 17:
-                    System.out.println("seven teen");
+                    System.out.println("seventeen");
                 case 18:
-                    System.out.println("eight teen");
+                    System.out.println("eightteen");
                 case 19:
-                    System.out.println("nine teen");
+                    System.out.println("nineteen");
             }
-        } else if(number>=20 && number<100){
-            String a;
-                switch (number%10){
-                    case 2:
-                         a = "two";
-                        break;
-                    case 3:
-                         a = " three";
-                        break;
-                    case 4:
-                        System.out.println("fourty");
-                        break;
-                    case 5:
-                        System.out.println("fivety");
-                        break;
-                    case 6:
-                        System.out.println("sixty");
-                        break;
-                    case 7:
-                        System.out.println("seventy");
-                    case 8:
-                        System.out.println("eightty");
-                    case 9:
-                        System.out.println("ninety");
+        } else if (number >= 20 && number < 100) {
+            String string1 = "";
+            String string2 = "";
+            switch (number / 10) {
+                case 2:
+                    string1 = "twenty";
+                    break;
+                case 3:
+                    string1 = "thirty";
+                    break;
+                case 4:
+                    string1 = "forty";
+                    break;
+                case 5:
+                    string1 = "fifty";
+                    break;
+                case 6:
+                    string1 = "sixty";
+                    break;
+                case 7:
+                    string1 = "seventy";
+                    break;
+                case 8:
+                    string1 = "eightty";
+                    break;
+                case 9:
+                    string1 = "ninety";
+                    break;
             }
+            switch (number % 10) {
+                case 1:
+                    string2 = "one";
+                    break;
+                case 2:
+                    string2 = "two";
+                    break;
+                case 3:
+                    string2 = "three";
+                    break;
+                case 4:
+                    string2 = "four";
+                    break;
+                case 5:
+                    string2 = "five";
+                    break;
+                case 6:
+                    string2 = "six";
+                    break;
+                case 7:
+                    string2 = "seven";
+                    break;
+                case 8:
+                    string2 = "eight";
+                    break;
+                case 9:
+                    string2 = "nine";
+                    break;
+            }
+            System.out.println(string1 + "-" + string2);
+        } else if (number >= 100 && number < 1000) {
+            String string3 = "";
+            String string4 = "";
+            String string5 = "";
+            switch (number / 100) {
+                case 1:
+                    string3 = "one hundred";
+                    break;
+                case 2:
+                    string3 = "two hundred";
+                    break;
+                case 3:
+                    string3 = "three hundred";
+                    break;
+                case 4:
+                    string3 = "four hundred";
+                    break;
+                case 5:
+                    string3 = "five hundred";
+                    break;
+                case 6:
+                    string3 = "six hundred";
+                    break;
+                case 7:
+                    string3 = "seven hundred";
+                    break;
+                case 8:
+                    string3 = "eight hundred";
+                    break;
+                case 9:
+                    string3 = "nine hundred";
+                    break;
+            }
+            switch ((number % 100) / 10) {
+                case 1:
+                    switch (number % 100) {
+                        case 10:
+                            string4 = "ten";
+                            break;
+                        case 11:
+                            string4 = "eleven";
+                            break;
+                        case 12:
+                            string4 = "twelve";
+                            break;
+                        case 13:
+                            string4 = "thirteen";
+                            break;
+                        case 14:
+                            string4 = "fourteen";
+                            break;
+                        case 15:
+                            string4 = "fiveteen";
+                            break;
+                        case 16:
+                            string4 = "sixteen";
+                            break;
+                        case 17:
+                            string4 = "seventeen";
+                            break;
+                        case 18:
+                            string4 = "eightteen";
+                            break;
+                        case 19:
+                            string4 = "nineteen";
+                            break;
+                    }
+                    break;
+                case 2:
+                    string4 = "twenty";
+                    break;
+                case 3:
+                    string4 = "thirty";
+                    break;
+                case 4:
+                    string4 = "forty";
+                    break;
+                case 5:
+                    string4 = "fifty";
+                    break;
+                case 6:
+                    string4 = "sixty";
+                    break;
+                case 7:
+                    string4 = "seventy";
+                    break;
+                case 8:
+                    string4 = "eightty";
+                    break;
+                case 9:
+                    string4 = "ninety";
+                    break;
+            }
+            switch ((number % 100) % 10) {
+                case 1:
+                    string5 = "one";
+                    break;
+                case 2:
+                    string5 = "two";
+                    break;
+                case 3:
+                    string5 = "three";
+                    break;
+                case 4:
+                    string5 = "four";
+                    break;
+                case 5:
+                    string5 = "five";
+                    break;
+                case 6:
+                    string5 = "six";
+                    break;
+                case 7:
+                    string5 = "seven";
+                    break;
+                case 8:
+                    string5 = "eight";
+                    break;
+                case 9:
+                    string5 = "nine";
+                    break;
+            }
+            if ((number % 100) < 20 && (number % 100) >= 10) {
+                System.out.println(string3 + "-" + string4);
+            } else {
+                System.out.println(string3 + "-" + string4 + " " + string5);
+            }
+        } else {
+            System.out.println("impossible");
         }
     }
 }
