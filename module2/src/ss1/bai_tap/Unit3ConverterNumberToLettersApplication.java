@@ -1,10 +1,8 @@
 package ss1.bai_tap;
 
-import jdk.dynalink.beans.StaticClass;
-
 import java.util.Scanner;
 
-public class unit3_converter_number_to_letters_application {
+public class Unit3ConverterNumberToLettersApplication {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);

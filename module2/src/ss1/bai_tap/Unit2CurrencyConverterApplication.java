@@ -2,7 +2,7 @@ package ss1.bai_tap;
 
 import java.util.Scanner;
 
-public class unit2_currency_converter_application {
+public class Unit2CurrencyConverterApplication {
     public static void main(String[] args) {
         double rate = 23000;
         double usd;
