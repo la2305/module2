@@ -33,7 +33,12 @@ public class BuiltClassQuadraticEquation {
         return (-b + Math.sqrt(b * b - 4 * a * c)) / (2 * a);
     }
 
+
     public double getRoot2() {
         return (-b - Math.sqrt(b * b - 4 * a * c)) / (2 * a);
+    }
+
+    public double getRoot3() {
+        return -c / b;
     }
 }

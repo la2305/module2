@@ -18,11 +18,7 @@ public class SumTheNumbersOnTheMainDiagonalOfASquareMatrix {
         }
         int sum = 0;
         for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array[i].length; j++) {
-                if (i == j) {
-                    sum += array[i][j];
-                }
-            }
+                    sum += array[i][i];
         }
         System.out.println("Sum of number on diagonal of matrix: " + sum);
     }

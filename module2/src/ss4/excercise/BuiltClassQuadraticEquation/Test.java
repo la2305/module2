@@ -13,7 +13,9 @@ public class Test {
         double c = scanner.nextDouble();
         BuiltClassQuadraticEquation abc = new BuiltClassQuadraticEquation(a, b, c);
 
-        if (abc.getDiscriminant() < 0) {
+        if (a == 0) {
+            System.out.println("Phương trình có 1 nghiệp duy nhất: " + abc.getRoot3());
+        } else if (abc.getDiscriminant() < 0) {
             System.out.println("Phương trình vô nghiệm");
         } else if (abc.getDiscriminant() == 0) {
             System.out.println("Phương trình có nghiệm kép x1=x2= " + abc.getDoubleSolution());

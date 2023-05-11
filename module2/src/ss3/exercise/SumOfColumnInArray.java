@@ -24,11 +24,7 @@ public class SumOfColumnInArray {
         } while (numberOfColumn > 0 && numberOfColumn > column);
         int sum = 0;
         for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array[i].length; j++) {
-                if ((j + 1) == numberOfColumn) {
-                    sum += array[i][j];
-                }
-            }
+                    sum += array[i][column-1];
         }
         System.out.println("Sum of column you entered: " + sum);
     }
