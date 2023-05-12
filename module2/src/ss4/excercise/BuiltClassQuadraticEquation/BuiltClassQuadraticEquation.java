@@ -1,7 +1,9 @@
 package ss4.excercise.BuiltClassQuadraticEquation;
 
 public class BuiltClassQuadraticEquation {
-    private double a, b, c;
+    private double a;
+    private double b;
+    private double c;
 
     public BuiltClassQuadraticEquation(double a, double b, double c) {
         this.a = a;
