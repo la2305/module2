@@ -17,9 +17,10 @@ public class Circle {
     protected double getRadius() {
         return radius;
     }
+
     // xài protected với default như nhau nhưng protected
     // có thể kế thừa xa hơn qua các packed gần như có extend từ lớp cha
     double getArea() {
-        return Math.PI * this.radius;
+        return Math.PI * this.radius * this.radius;
     }
 }

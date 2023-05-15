@@ -9,7 +9,6 @@ public class Test {
         System.out.println(studentDefault.toString());
         studentDefault.setName("Bi");
         studentDefault.setClasses("C04");
-        System.out.println(studentDefault.getName());
-        System.out.println(studentDefault.getClasses());
+        System.out.println(studentDefault.toString());
     }
 }
