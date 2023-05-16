@@ -15,9 +15,13 @@ public class Test {
         array [2] = circle2;
         array [3] = circle3;
 
-//        for (Shape array: arrays
-//             ) {
-//
-//        }
+        for (Shape n: array
+             ) {
+
+            if( n instanceof Colorable){
+                ((Colorable) n).howToColor();
+
+            }
+        }
     }
 }
