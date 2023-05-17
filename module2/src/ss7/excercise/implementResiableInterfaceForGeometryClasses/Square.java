@@ -22,7 +22,7 @@ public class Square extends Shape implements Colorable {
         this.edge = edge;
     }
     public double getArea(){
-        return this.edge*this.edge;
+            return this.edge*this.edge;
     }
     public double getPerimeter(){
         return this.edge*4;

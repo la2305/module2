@@ -14,13 +14,12 @@ public class Test {
         array [1] = square;
         array [2] = circle2;
         array [3] = circle3;
+//        System.out.println(circle1.getArea());
 
-        for (Shape n: array
-             ) {
-
+        for (Shape n: array) {
+            System.out.println("Area: "+n.getArea());
             if( n instanceof Colorable){
                 ((Colorable) n).howToColor();
-
             }
         }
     }
