@@ -12,7 +12,7 @@ public class Test {
         if (scoreOfFirstPlayer == scoreOfSecondPlayer || scoreOfFirstPlayer>=4 || scoreOfSecondPlayer>=4){
             System.out.println(TennisGame.getScoreCompare(scoreOfFirstPlayer,scoreOfSecondPlayer));
         } else {
-            System.out.println(TennisGame.getScoreOfPlayer(scoreOfFirstPlayer,scoreOfSecondPlayer));
+            System.out.println(TennisGame.getScoreOfEachOtherPlayer(scoreOfFirstPlayer,scoreOfSecondPlayer));
         }
     }
 }

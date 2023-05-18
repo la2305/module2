@@ -38,7 +38,7 @@ public class TennisGame {
         return announceScore;
     }
 
-    public static String getScoreOfPlayer(int scoreOfFirstPlayer, int scoreOfSecondPlayer) {
+    public static String getScoreOfEachOtherPlayer(int scoreOfFirstPlayer, int scoreOfSecondPlayer) {
         String announceScore = "";
         int startingPoint = 0;
         for (int i = 1; i < 3; i++) {
