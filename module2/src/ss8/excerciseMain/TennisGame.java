@@ -1,10 +1,10 @@
 package ss8.excerciseMain;
 
 public class TennisGame {
-    public static final char one_score = 1;
-    public static final char second_score = 2;
-    public static final char third_score = 3;
-    public static final char zero_score = 0;
+    public static final char One_Score = 1;
+    public static final char Second_Score = 2;
+    public static final char Third_Score = 3;
+    public static final char Zero_Score = 0;
 
 
     public static String getScoreCompare(int scoreOfFirstPlayer, int scoreOfSecondPlayer) {
@@ -12,16 +12,16 @@ public class TennisGame {
         int differenceScoreOfTwoPlayers;
         if (scoreOfFirstPlayer == scoreOfSecondPlayer) {
             switch (scoreOfFirstPlayer) {
-                case zero_score:
+                case Zero_Score:
                     announceScore = "Zero-All";
                     break;
-                case one_score:
+                case One_Score:
                     announceScore = "Fifteen-All";
                     break;
-                case second_score:
+                case Second_Score:
                     announceScore = "Thirty-All";
                     break;
-                case third_score:
+                case Third_Score:
                     announceScore = "Forty-All";
                     break;
                 default:
@@ -48,16 +48,16 @@ public class TennisGame {
                 startingPoint = scoreOfSecondPlayer;
             }
             switch (startingPoint) {
-                case zero_score:
-                    announceScore += "Love";
+                case Zero_Score:
+                    announceScore += "Zero";
                     break;
-                case one_score:
+                case One_Score:
                     announceScore += "Fifteen";
                     break;
-                case second_score:
+                case Second_Score:
                     announceScore += "Thirty";
                     break;
-                case third_score:
+                case Third_Score:
                     announceScore += "Forty";
                     break;
             }
