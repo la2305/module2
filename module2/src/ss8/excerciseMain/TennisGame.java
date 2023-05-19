@@ -1,10 +1,10 @@
 package ss8.excerciseMain;
 
 public class TennisGame {
-    public static final char One_Score = 1;
-    public static final char Second_Score = 2;
-    public static final char Third_Score = 3;
-    public static final char Zero_Score = 0;
+    public static final char ONE_SCORE = 1;
+    public static final char SECOND_SCORE = 2;
+    public static final char THIRD_SCORE = 3;
+    public static final char ZERO_SCORE = 0;
 
 
     public static String getScoreCompare(int scoreOfFirstPlayer, int scoreOfSecondPlayer) {
@@ -12,16 +12,16 @@ public class TennisGame {
         int differenceScoreOfTwoPlayers;
         if (scoreOfFirstPlayer == scoreOfSecondPlayer) {
             switch (scoreOfFirstPlayer) {
-                case Zero_Score:
+                case ZERO_SCORE:
                     announceScore = "Zero-All";
                     break;
-                case One_Score:
+                case ONE_SCORE:
                     announceScore = "Fifteen-All";
                     break;
-                case Second_Score:
+                case SECOND_SCORE:
                     announceScore = "Thirty-All";
                     break;
-                case Third_Score:
+                case THIRD_SCORE:
                     announceScore = "Forty-All";
                     break;
                 default:
@@ -48,16 +48,16 @@ public class TennisGame {
                 startingPoint = scoreOfSecondPlayer;
             }
             switch (startingPoint) {
-                case Zero_Score:
+                case ZERO_SCORE:
                     announceScore += "Zero";
                     break;
-                case One_Score:
+                case ONE_SCORE:
                     announceScore += "Fifteen";
                     break;
-                case Second_Score:
+                case SECOND_SCORE:
                     announceScore += "Thirty";
                     break;
-                case Third_Score:
+                case THIRD_SCORE:
                     announceScore += "Forty";
                     break;
             }
