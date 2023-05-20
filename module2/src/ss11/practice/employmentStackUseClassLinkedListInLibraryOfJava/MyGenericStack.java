@@ -2,7 +2,6 @@ package ss11.practice.employmentStackUseClassLinkedListInLibraryOfJava;
 
 import java.util.EmptyStackException;
 import java.util.LinkedList;
-import java.util.Stack;
 
 public class MyGenericStack<T> {
     private LinkedList<T> stack;
@@ -10,7 +9,7 @@ public class MyGenericStack<T> {
         this.stack = new LinkedList<>();
     }
     public void push(T element){
-        stack.addFirst(element);
+        stack.push(element);
     }
     public T pop(){
         if (stack.isEmpty()){
@@ -27,5 +26,4 @@ public class MyGenericStack<T> {
         }
         return false;
     }
-
 }
