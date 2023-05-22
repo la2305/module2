@@ -32,24 +32,26 @@ public class MyList<E> {
     }
 
     public E get(int index) {
-        if(index < 0 || index >= size){
-            throw new IndexOutOfBoundsException("index: "+ index+", size: "+size);
+        if (index<0 ||index>=size){
+            throw new IndexOutOfBoundsException("index" +index+", size" + size);
         }
         return (E) elements[index];
-    }
+     }
 
-    public boolean add(E element) {
-        elements[size] = element;
+    public boolean add(E o) {
+        ensureCapacity(size+1);
+        elements[size] = o;
         size++;
         return true;
     }
 
     public void add(E element, int index) {
-        if (size == elements.length) {
-            ensureCapacity(index);
+        if(index < 0 || index >= size){
+            throw new IndexOutOfBoundsException("index: "+ index+", size: "+size);
         }
-        elements[index] = element;
-        size++;
+        ensureCapacity(size+1);
+        System.arraycopy(elements,index,elements,index+1,size-index);
+        elements[index]=elements;
     }
 
     public void ensureCapacity(int minCapacity) {
