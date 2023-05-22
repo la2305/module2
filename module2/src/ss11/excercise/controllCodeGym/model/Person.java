@@ -7,29 +7,13 @@ public class Person {
     private String personId;
     private String personName;
     private String personDate;
-    private String personClass;
     private boolean gender;
-    private float personPoint;
 
-    private String personSpecialize;
-    public Person(){
-
-    }
-
-    public Person(String personId, String personName, String personDate,boolean gender, String personClass, float personPoint) {
+    public Person(String personId, String personName, String personDate, boolean gender) {
         this.personId = personId;
         this.personName = personName;
-        this.gender =gender;
         this.personDate = personDate;
-        this.personClass = personClass;
-        this.personPoint = personPoint;
-    }
-    public Person(String personId, String personName, String personDate,boolean gender, String personSpecialize) {
-        this.personId = personId;
-        this.personName = personName;
-        this.gender =gender;
-        this.personDate = personDate;
-        this.personSpecialize = personSpecialize;
+        this.gender = gender;
     }
 
     @Override
@@ -47,14 +31,6 @@ public class Person {
 
     public String getPersonId() {
         return personId;
-    }
-
-    public boolean isGender() {
-        return gender;
-    }
-
-    public void setGender(boolean gender) {
-        this.gender = gender;
     }
 
     public void setPersonId(String personId) {
@@ -77,28 +53,12 @@ public class Person {
         this.personDate = personDate;
     }
 
-    public String getPersonClass() {
-        return personClass;
+    public boolean isGender() {
+        return gender;
     }
 
-    public void setPersonClass(String personClass) {
-        this.personClass = personClass;
-    }
-
-    public float getPersonPoint() {
-        return personPoint;
-    }
-
-    public void setPersonPoint(float personPoint) {
-        this.personPoint = personPoint;
-    }
-
-    public String getPersonSpecialize() {
-        return personSpecialize;
-    }
-
-    public void setPersonSpecialize(String personSpecialize) {
-        this.personSpecialize = personSpecialize;
+    public void setGender(boolean gender) {
+        this.gender = gender;
     }
 
     @Override
@@ -106,10 +66,8 @@ public class Person {
         return "Person{" +
                 "personId='" + personId + '\'' +
                 ", personName='" + personName + '\'' +
-                ", personDate=" + personDate +
-                ", personClass='" + personClass + '\'' +
-                ", personPoint=" + personPoint +
-                ", personSpecialize='" + personSpecialize + '\'' +
+                ", personDate='" + personDate + '\'' +
+                ", gender=" + gender +
                 '}';
     }
 }

@@ -8,5 +8,5 @@ public interface IPersonRespository {
     List<Person> getAll();
     void addPerson(Person person);
     Person getById(String id);
-    void removePerson(Person person );
+    void removePerson(Person person);
 }
