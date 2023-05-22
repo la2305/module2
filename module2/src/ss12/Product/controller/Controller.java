@@ -1,15 +1,13 @@
 package ss12.Product.controller;
 
-import ss11.excercise.controllCodeGym.respository.IPersonRespository;
-import ss11.excercise.controllCodeGym.respository.PersonRespository;
-import ss11.excercise.controllCodeGym.service.IPersonService;
-import ss11.excercise.controllCodeGym.service.PersonService;
+import ss12.Product.service.IProductService;
+import ss12.Product.service.ProductService;
 
 import java.util.Scanner;
 
 public class Controller {
     private static Scanner scanner = new Scanner(System.in);
-    private static IPersonService personService = new PersonService();
+    private static IProductService productService = new ProductService();
 
     public static void menu() {
         do {
@@ -25,18 +23,18 @@ public class Controller {
             System.out.println("7.Thoát");
             System.out.println("Chọn chức năng");
             int choice = Integer.parseInt(scanner.nextLine());
-            switch (choice){
+            switch (choice) {
                 case 1:
-
+                    productService.addProduct();
                     break;
                 case 2:
 
                     break;
                 case 3:
-
+                    productService.deleteProduct();
                     break;
                 case 4:
-                    personService.displayAll();
+                    productService.displayAll();
                     break;
                 case 5:
 
