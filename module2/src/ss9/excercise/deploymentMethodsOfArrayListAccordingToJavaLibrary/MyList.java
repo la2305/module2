@@ -55,8 +55,8 @@ public class MyList<E> {
     }
 
     public void ensureCapacity(int minCapacity) {
-        if (minCapacity >= 0) {
-            int newSize = this.elements.length + minCapacity;
+        if (minCapacity >elements.length) {
+            int newSize = this.elements.length + (elements.length >>1);
             elements = Arrays.copyOf(elements, newSize);
         } else {
             throw new IllegalArgumentException("minCapacity" + minCapacity);
