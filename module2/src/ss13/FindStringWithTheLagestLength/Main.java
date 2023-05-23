@@ -15,6 +15,8 @@ public class Main {
             for (int j = i + 1; j < string.length(); j++) {
                 if (string.charAt(j) > list.getLast()) {
                     list.add(string.charAt(j));
+                }else {
+                    break;
                 }
             }
             if (list.size() > max.size()) {
