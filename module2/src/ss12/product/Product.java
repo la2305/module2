@@ -1,4 +1,4 @@
-package ss12.model;
+package ss12.product;
 
 import java.util.Objects;
 
@@ -6,12 +6,14 @@ public class Product {
     private String id;
     private String name;
     private String description;
+    private int quality;
     private float price;
 
-    public Product(String id, String name, String description, float price) {
+    public Product(String id, String name, String description, int quality, float price) {
         this.id = id;
         this.name = name;
         this.description = description;
+        this.quality = quality;
         this.price = price;
     }
 
@@ -52,6 +54,14 @@ public class Product {
         this.description = description;
     }
 
+    public int getQuality() {
+        return quality;
+    }
+
+    public void setQuality(int quality) {
+        this.quality = quality;
+    }
+
     public float getPrice() {
         return price;
     }
@@ -66,6 +76,7 @@ public class Product {
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
+                ", quality=" + quality +
                 ", price=" + price +
                 '}';
     }

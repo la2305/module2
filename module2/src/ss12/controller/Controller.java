@@ -1,15 +1,15 @@
 package ss12.controller;
 
-import ss12.service.IProductService;
-import ss12.service.ProductService;
+
+import ss12.service.IServiceProduct;
+import ss12.service.ServiceProduct;
 
 import java.util.Scanner;
 
 public class Controller {
     private static Scanner scanner = new Scanner(System.in);
-    private static IProductService productService = new ProductService();
-
-    public static void menu() {
+    private static IServiceProduct serviceProduct = new ServiceProduct();
+    public static void menu(){
         do {
             System.out.println("CHƯƠNG TRÌNH QUẢN LÍ SẢN PHẨM");
             System.out.println("---------------------------------------------------");
@@ -23,30 +23,29 @@ public class Controller {
             System.out.println("7.Thoát");
             System.out.println("Chọn chức năng");
             int choice = Integer.parseInt(scanner.nextLine());
-            switch (choice) {
+            switch (choice){
                 case 1:
-                    productService.addProduct();
+                    serviceProduct.addProduct();
                     break;
                 case 2:
-
+                    serviceProduct.editNameProDuct();
                     break;
                 case 3:
-                    productService.deleteProduct();
+                    serviceProduct.deleteProduct();
                     break;
                 case 4:
-                    productService.displayAll();
+                    serviceProduct.displayAll();
                     break;
                 case 5:
-
+                    serviceProduct.findName();
                     break;
                 case 6:
-
+                    serviceProduct.arrangeProductPrice();
                     break;
                 case 7:
                     System.out.println("Thoát nhé");
                     System.exit(1);
             }
-
-        } while (true);
+        }while (true);
     }
 }
