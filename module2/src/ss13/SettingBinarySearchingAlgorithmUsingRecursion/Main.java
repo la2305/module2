@@ -22,10 +22,10 @@ public class Main {
 
     public static int binarySearch(int[] array, int left, int right, int x) {
         int middle = (left + right) / 2;
-        if (left > right) {
+        if (left <= right) {
             return -1;
         }
-        if (array[middle] == x) {
+        if (x == array[middle]) {
             return middle;
         } else if (x > middle) {
             left = middle + 1;
