@@ -7,8 +7,11 @@ import ss12.service.ServiceProduct;
 import java.util.Scanner;
 
 public class Controller {
+    //
     private static Scanner scanner = new Scanner(System.in);
+    //
     private static IServiceProduct serviceProduct = new ServiceProduct();
+    //
     public static void menu(){
         do {
             System.out.println("CHƯƠNG TRÌNH QUẢN LÍ SẢN PHẨM");

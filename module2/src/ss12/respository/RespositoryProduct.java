@@ -9,8 +9,10 @@ import java.util.Comparator;
 import java.util.List;
 
 public class RespositoryProduct implements IRespositoryProduct {
+    //
     private static List<Product> products = new ArrayList<>();
 
+    //
     static {
         products.add(new Product("1-001", "Bánh", "Bánh ăn cũng ngon", 10, 5000));
         products.add(new Product("1-002", "Bánh trái cây", "Bánh này ăn vô đau bụng", 15, 10000));
@@ -30,8 +32,8 @@ public class RespositoryProduct implements IRespositoryProduct {
 
     @Override
     public Product getById(String id) {
-        for (Product product:products) {
-            if (product.getId().equals(id)){
+        for (Product product : products) {
+            if (product.getId().equals(id)) {
                 return product;
             }
         }
@@ -45,8 +47,8 @@ public class RespositoryProduct implements IRespositoryProduct {
 
     @Override
     public void getByName(String name) {
-        for (Product product:products){
-            if (product.getName().contains(name)){
+        for (Product product : products) {
+            if (product.getName().contains(name)) {
                 System.out.println(product);
             }
         }
@@ -56,12 +58,13 @@ public class RespositoryProduct implements IRespositoryProduct {
     public void editProduct(Product product) {
 
     }
+
     @Override
     public void sortUpAscending() {
         Collections.sort(products, new Comparator<Product>() {
             @Override
             public int compare(Product o1, Product o2) {
-                return (int) (o1.getPrice()-o2.getPrice());
+                return (int) (o1.getPrice() - o2.getPrice());
             }
         });
     }
@@ -71,7 +74,7 @@ public class RespositoryProduct implements IRespositoryProduct {
         Collections.sort(products, new Comparator<Product>() {
             @Override
             public int compare(Product o1, Product o2) {
-                return (int) (o2.getPrice() -o1.getPrice());
+                return (int) (o2.getPrice() - o1.getPrice());
             }
         });
     }
