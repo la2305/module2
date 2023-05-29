@@ -2,15 +2,15 @@ package ss17.practice;
 
 import java.io.Serializable;
 
-public class Customer implements Serializable {
+public class Text implements Serializable {
     private int id;
     private String name;
     private transient String email;
 
-    public Customer() {
+    public Text() {
     }
 
-    public Customer(int id, String name, String email) {
+    public Text(int id, String name, String email) {
         this.id = id;
         this.name = name;
         this.email = email;
