@@ -25,14 +25,20 @@ public class PersonService implements IPersonService {
     public void addPerson() {
         int number;
         do {
-            System.out.println("Bạn muốn nhập thông tin cho học sinh hay giáo viên, nếu muốn nhập cho học sinh thì nhập số 1, giáo viên thì nhập số 2, nhập số 3 nếu bạn không muốn thêm học sinh hay giáo viên");
-            number = Integer.parseInt(scanner.nextLine());
-            if (number == 1) {
-                addStudent();
-            } else if (number == 2) {
-                addTeacher();
+            try {
+                System.out.println("Bạn muốn nhập thông tin cho học sinh hay giáo viên, nếu muốn nhập cho học sinh thì nhập số 1, giáo viên thì nhập số 2, nhập số 3 nếu bạn không muốn thêm học sinh hay giáo viên");
+                number = Integer.parseInt(scanner.nextLine());
+                break;
+            } catch (NumberFormatException e) {
+                System.out.println("Vui lòng nhập vào 1 số");
             }
-        } while (number == 1 || number == 2);
+
+        } while (true);
+        if (number == 1) {
+            addStudent();
+        } else if (number == 2) {
+            addTeacher();
+        }
     }
 
     public void addStudent() {
@@ -44,7 +50,15 @@ public class PersonService implements IPersonService {
         String date = scanner.nextLine();
         System.out.println("Nhập giới tính của học sinh. Nam nhập số 1, nữ nhập số 2");
         boolean gender;
-        int genderNumber = Integer.parseInt(scanner.nextLine());
+        int genderNumber;
+        do {
+            try {
+                genderNumber = Integer.parseInt(scanner.nextLine());
+                break;
+            } catch (NumberFormatException e) {
+                System.out.println("Vui lòng nhập số");
+            }
+        } while (true);
         if (genderNumber == 1) {
             gender = true;
         } else {
@@ -69,7 +83,15 @@ public class PersonService implements IPersonService {
         String date = scanner.nextLine();
         System.out.println("Nhập giới tính của giáo viên. Nam nhập số 1, nữ nhập số 2");
         boolean gender;
-        int genderNumber = Integer.parseInt(scanner.nextLine());
+        int genderNumber;
+        do {
+            try {
+                genderNumber = Integer.parseInt(scanner.nextLine());
+                break;
+            } catch (NumberFormatException e) {
+                System.out.println("Vui lòng nhập số");
+            }
+        } while (true);
         if (genderNumber == 1) {
             gender = true;
         } else {
