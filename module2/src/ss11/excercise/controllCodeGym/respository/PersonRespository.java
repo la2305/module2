@@ -1,5 +1,6 @@
 package ss11.excercise.controllCodeGym.respository;
 
+import ss11.excercise.controllCodeGym.common.ReadAndCoppy;
 import ss11.excercise.controllCodeGym.model.Person;
 import ss11.excercise.controllCodeGym.model.Student;
 import ss11.excercise.controllCodeGym.model.Teacher;
@@ -17,12 +18,15 @@ public class PersonRespository implements IPersonRespository {
 
     @Override
     public List<Person> getAll() {
+        persons = ReadAndCoppy.readFile();
         return persons;
     }
 
     @Override
     public void addPerson(Person person) {
+        persons = ReadAndCoppy.readFile();
         persons.add(person);
+        ReadAndCoppy.writeFile(persons);
     }
 
     @Override
@@ -37,6 +41,8 @@ public class PersonRespository implements IPersonRespository {
 
     @Override
     public void removePerson(Person person) {
+        persons = ReadAndCoppy.readFile();
         persons.remove(person);
+        ReadAndCoppy.writeFile(persons);
     }
 }
