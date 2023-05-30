@@ -5,7 +5,7 @@ import java.util.regex.Pattern;
 
 public class Validate_Number {
     public static void main(String[] args) {
-        String numberPhoneValid =" (84)-(0978489648)";
+        String numberPhoneValid ="(84)-(0978489648)";
         String numberPhoneInValid ="(a8)-(22222222)";
         String numberPhoneRegex ="^[(]\\d{2}[)][-][(][0]\\d{9}[)]$";
         Pattern pattern = Pattern.compile(numberPhoneRegex);
