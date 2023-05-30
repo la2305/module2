@@ -27,6 +27,7 @@ public class PersonRespository implements IPersonRespository {
 
     @Override
     public Person getById(String id) {
+        persons = ReadAndCoppy.readFile();
         for (Person person:persons) {
             if (person.getPersonId().equals(id)){
                 return person;
