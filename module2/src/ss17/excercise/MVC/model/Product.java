@@ -1,6 +1,7 @@
 package ss17.excercise.MVC.model;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 public class Product implements Serializable {
     private String id;
@@ -18,6 +19,19 @@ public class Product implements Serializable {
         this.price = price;
         this.manufacturer = manufacturer;
         this.description = description;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Product product = (Product) o;
+        return Objects.equals(id, product.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
     }
 
     public String getId() {

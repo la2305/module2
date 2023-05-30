@@ -56,7 +56,7 @@ public class ProductService implements IProductService {
             System.out.println("2. Suy nghĩ lại");
             int choice = Integer.parseInt(scanner.nextLine());
             if (choice == 1) {
-                productRespository.RemoveProduct(product);
+                productRespository.removeProduct(product);
                 System.out.println("Xóa thành công");
             }
         }

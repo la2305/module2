@@ -10,11 +10,6 @@ import java.util.List;
 public class ProductRespository implements IProductRespository {
     private static List<Product> products = new ArrayList<>();
 
-    static {
-        products.add(new Product("1-001", "", 50000, "Việt Nam", "Bánh xe bò siêu cấp vip pro"));
-        products.add(new Product("1-002", "Bánh xe máy bay", 10000, "Mỹ", "Bánh xe đi bao thủng"));
-//        ReadAndWriteFile.writeProductListToFile(products);
-    }
 
     @Override
     public List<Product> getAll() {
@@ -24,6 +19,7 @@ public class ProductRespository implements IProductRespository {
 
     @Override
     public Product getById(String id) {
+        products = ReadAndWriteFile.readProductFromFile();
         for (Product product:products) {
             if (product.getId().equals(id)){
                 return product;
@@ -33,10 +29,10 @@ public class ProductRespository implements IProductRespository {
     }
 
     @Override
-    public void RemoveProduct(Product product) {
-//        products = ReadAndWriteFile.readProductFromFile();
+    public void removeProduct(Product product) {
+        products = ReadAndWriteFile.readProductFromFile();
         products.remove(product);
-//        ReadAndWriteFile.writeProductListToFile(products);
+        ReadAndWriteFile.writeProductListToFile(products);
     }
 
     @Override
@@ -48,6 +44,7 @@ public class ProductRespository implements IProductRespository {
 
     @Override
     public void getByName(String name) {
+        products = ReadAndWriteFile.readProductFromFile();
         for (Product product:products) {
             if (product.getName().contains(name)){
                 System.out.println(product);

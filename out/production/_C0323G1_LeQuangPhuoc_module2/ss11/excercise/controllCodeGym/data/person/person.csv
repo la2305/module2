@@ -1,1 +1,2 @@
-[Person{personId='1-001', personName='La ', personDate='23/5/1998', gender=true}Student{className='C0323G1', point=10.0}]
+[Person{personId='[Person{personId='1'', personName=' personName='1'', personDate=' personDate='1'', gender=false}Teacher{specialize=' point=1.0}]'}, Person{personId='1', personName='2', personDate='2', gender=false}Teacher{specialize='2'}]
+[Person{personId='[Person{personId='1'', personName=' personName='1'', personDate=' personDate='1'', gender=false}Teacher{specialize=' point=1.0}]'}, Person{personId='1', personName='2', personDate='2', gender=false}Teacher{specialize='2'}]

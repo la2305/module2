@@ -11,10 +11,6 @@ import java.util.List;
 public class PersonRespository implements IPersonRespository {
     private static List<Person> persons = new ArrayList<>();
 
-    static {
-        persons.add(new Student("1-001", "La 1", "25/05/2000", true, "C03", 5));
-        persons.add(new Teacher("2-001", "Lu 1", "25/05/1990", true, "Dạy tiếng anh"));
-    }
 
     @Override
     public List<Person> getAll() {
