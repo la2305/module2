@@ -1,9 +1,16 @@
 package ss19_case_study.controller;
 
+import ss19_case_study.service.CustomerService;
+import ss19_case_study.service.EmployeeService;
+import ss19_case_study.service.implement.ICustomerService;
+import ss19_case_study.service.implement.IEmployeeService;
+
 import java.util.Scanner;
 
 public class FuramaController {
     private static Scanner scanner = new Scanner(System.in);
+    private static IEmployeeService employeeService = new EmployeeService();
+    private static ICustomerService customerService = new CustomerService();
 
     public static boolean displayMainMenu() {
         do {
@@ -42,25 +49,34 @@ public class FuramaController {
     }
 
     public static void displayEmployeeManagementMenu() {
-        DO_WHILE: do {
+        DO_WHILE:
+        do {
             System.out.println("------Menu Employee Management------");
             System.out.println("--Enter a number from your keyboard to choose service--");
             System.out.println("1. Display list employees");
             System.out.println("2. Add new employee");
-            System.out.println("3. Edit employee");
-            System.out.println("4. Return main menu");
+            System.out.println("3. Edit infomation of employee");
+            System.out.println("4. Delete employee");
+            System.out.println("5. Find employee follow name");
+            System.out.println("6. Return main menu");
             int choice = Integer.parseInt(scanner.nextLine());
             switch (choice) {
                 case 1:
-
+                    employeeService.displayAll();
                     break;
                 case 2:
-
+                    employeeService.addEmployee();
                     break;
                 case 3:
-
+                    employeeService.editEmployee();
                     break;
                 case 4:
+                    employeeService.deleteEmployee();
+                    break;
+                case 5:
+                    employeeService.findNameEmployee();
+                    break;
+                case 6:
                     System.out.println("Back main menu");
                     break DO_WHILE;
                 default:
@@ -70,27 +86,35 @@ public class FuramaController {
     }
 
     public static void displayCustomerManagementMenu() {
-        DO_WHILE: do {
+        do {
             System.out.println("------Menu Customer Management------");
             System.out.println("--Enter a number from your keyboard to choose service--");
             System.out.println("1. Display list customers");
             System.out.println("2. Add new customer");
             System.out.println("3. Edit customer");
-            System.out.println("4. Return main menu");
+            System.out.println("4. Delete customer");
+            System.out.println("5. Find customer follow name");
+            System.out.println("6. Return main menu");
             int choice = Integer.parseInt(scanner.nextLine());
             switch (choice) {
                 case 1:
-
+                    customerService.displayAll();
                     break;
                 case 2:
-
+                    customerService.addCustomer();
                     break;
                 case 3:
-
+                    customerService.editCustomer();
                     break;
                 case 4:
+                    customerService.deleteCustomer();
+                    break;
+                case 5:
+                    customerService.findNameCustomer();
+                    break;
+                case 6:
                     System.out.println("Back main menu");
-                    break DO_WHILE;
+                    return;
                 default:
                     System.out.println("Enter a number to choose service");
             }
@@ -98,7 +122,8 @@ public class FuramaController {
     }
 
     public static void displayFacilityManagementMenu() {
-        DO_WHILE: do {
+        DO_WHILE:
+        do {
             System.out.println("------Menu Facility Management------");
             System.out.println("--Enter a number from your keyboard to choose service--");
             System.out.println("1. Display list facility");
@@ -126,7 +151,8 @@ public class FuramaController {
     }
 
     public static void displayBookingManagement() {
-        DO_WHILE: do {
+        DO_WHILE:
+        do {
             System.out.println("------Menu Booking Management------");
             System.out.println("--Enter a number from your keyboard to choose service--");
             System.out.println("1. Add new booking");
@@ -160,7 +186,8 @@ public class FuramaController {
     }
 
     public static void displayPromotionManagement() {
-        DO_WHILE: do {
+        DO_WHILE:
+        do {
             System.out.println("------Menu Promotion Management------");
             System.out.println("--Enter a number from your keyboard to choose service--");
             System.out.println("1. Display list customers use service");

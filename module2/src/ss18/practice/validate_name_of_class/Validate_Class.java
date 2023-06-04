@@ -5,9 +5,12 @@ import java.util.regex.Pattern;
 
 public class Validate_Class {
     public static void main(String[] args) {
-        String classValid = "C0323G";
+//        String classValid = "C0323G";
+//        String classInValid ="c0323G";
+//        String regexClass = "^[CAP]\\d{4}[GHIK]$";
+        String classValid = "NV-1914";
         String classInValid ="c0323G";
-        String regexClass = "^[CAP]\\d{4}[GHIK]$";
+        String regexClass = "^[N][V][-]\\d{4}$";
 
         Pattern pattern = Pattern.compile(regexClass);
 
