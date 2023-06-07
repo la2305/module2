@@ -1,9 +1,13 @@
 package ss19_case_study.controller;
 
+import ss19_case_study.service.BookingService;
 import ss19_case_study.service.CustomerService;
 import ss19_case_study.service.EmployeeService;
+import ss19_case_study.service.FacilityService;
+import ss19_case_study.service.implement.IBookingService;
 import ss19_case_study.service.implement.ICustomerService;
 import ss19_case_study.service.implement.IEmployeeService;
+import ss19_case_study.service.implement.IFacilityService;
 
 import java.util.Scanner;
 
@@ -11,6 +15,8 @@ public class FuramaController {
     private static Scanner scanner = new Scanner(System.in);
     private static IEmployeeService employeeService = new EmployeeService();
     private static ICustomerService customerService = new CustomerService();
+    private static IFacilityService facilityService = new FacilityService();
+    private static IBookingService bookingService = new BookingService();
 
     public static boolean displayMainMenu() {
         do {
@@ -129,19 +135,23 @@ public class FuramaController {
             System.out.println("1. Display list facility");
             System.out.println("2. Add new facility");
             System.out.println("3. Display list facility maintenance");
-            System.out.println("4. Return main menu");
+            System.out.println("4. Delete facility");
+            System.out.println("5. Return main menu");
             int choice = Integer.parseInt(scanner.nextLine());
             switch (choice) {
                 case 1:
-
+                    facilityService.displayAll();
                     break;
                 case 2:
-
+                    facilityService.addFacility();
                     break;
                 case 3:
-
+                    facilityService.findFacilityNeedMaintenance();
                     break;
                 case 4:
+                    facilityService.deleteFacility();
+                    break;
+                case 5:
                     System.out.println("Back main menu");
                     break DO_WHILE;
                 default:
@@ -164,17 +174,19 @@ public class FuramaController {
             int choice = Integer.parseInt(scanner.nextLine());
             switch (choice) {
                 case 1:
-
+                    bookingService.add();
                     break;
                 case 2:
-
+                    bookingService.display();
                     break;
                 case 3:
 
                     break;
                 case 4:
+
                     break;
                 case 5:
+
                     break;
                 case 6:
                     System.out.println("Back main menu");

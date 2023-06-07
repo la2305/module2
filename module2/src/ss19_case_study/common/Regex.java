@@ -63,4 +63,35 @@ public class Regex {
         Matcher matcher =pattern.matcher(type);
         return matcher.matches();
     }
+
+    public static boolean checkServiceFacilityHouse(String facility){
+        String regexFacilityHouse ="^[S][V][H][O][-]\\d{4}$";
+        Pattern pattern =Pattern.compile(regexFacilityHouse);
+        Matcher matcher = pattern.matcher(facility);
+        return matcher.matches();
+    }
+    public static boolean checkServiceFacilityVilla(String facility){
+        String regexFacilityHouse ="^[S][V][V][L][-]\\d{4}$";
+        Pattern pattern =Pattern.compile(regexFacilityHouse);
+        Matcher matcher = pattern.matcher(facility);
+        return matcher.matches();
+    }
+    public static boolean checkServiceFacilityRoom(String facility){
+        String regexFacilityHouse ="^[S][V][R][O][-]\\d{4}$";
+        Pattern pattern =Pattern.compile(regexFacilityHouse);
+        Matcher matcher = pattern.matcher(facility);
+        return matcher.matches();
+    }
+    public static boolean checkServiceFreeInclude(String serviceFree){
+        String regexTypeCustomer ="^(Khăn giấy)|(Bao cao su)|(Nước suối)|(Khăn tắm)|(Xà phòng)$";
+        Pattern pattern=Pattern.compile(regexTypeCustomer);
+        Matcher matcher =pattern.matcher(serviceFree);
+        return matcher.matches();
+    }
+    public static boolean checkServiceCodeFacility(String id){
+        String regex ="^([S][V][R][O][-]\\d{4})||([S][V][V][L][-]\\d{4})||[S][V][H][O][-]\\d{4}$";
+        Pattern pattern=Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(id);
+        return matcher.matches();
+    }
 }

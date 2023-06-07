@@ -1,20 +1,38 @@
 package ss19_case_study.model.booking;
 
+import ss19_case_study.model.customer.Customer;
+import ss19_case_study.model.facility.Facility;
+
+import java.util.Objects;
+
 public class Booking {
     private String bookingCode;
     private String bookingDate;
     private String bookingStartDate;
     private String bookingEndDate;
-    private String customerCode;
-    private String serviceCode;
+    private Customer customerCode;
+    private Facility serviceCode;
 
-    public Booking(String bookingCode, String bookingDate, String bookingStartDate, String bookingEndDate, String customerCode, String serviceCode) {
+    public Booking(String bookingCode, String bookingDate, String bookingStartDate, String bookingEndDate, Customer customerCode, Facility idFacility) {
         this.bookingCode = bookingCode;
         this.bookingDate = bookingDate;
         this.bookingStartDate = bookingStartDate;
         this.bookingEndDate = bookingEndDate;
         this.customerCode = customerCode;
-        this.serviceCode = serviceCode;
+        this.serviceCode = idFacility;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Booking booking = (Booking) o;
+        return Objects.equals(bookingCode, booking.bookingCode);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(bookingCode);
     }
 
     public String getBookingCode() {
@@ -49,19 +67,19 @@ public class Booking {
         this.bookingEndDate = bookingEndDate;
     }
 
-    public String getCustomerCode() {
+    public Customer getCustomerCode() {
         return customerCode;
     }
 
-    public void setCustomerCode(String customerCode) {
+    public void setCustomerCode(Customer customerCode) {
         this.customerCode = customerCode;
     }
 
-    public String getServiceCode() {
+    public Facility getServiceCode() {
         return serviceCode;
     }
 
-    public void setServiceCode(String serviceCode) {
+    public void setServiceCode(Facility serviceCode) {
         this.serviceCode = serviceCode;
     }
 

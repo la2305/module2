@@ -3,16 +3,16 @@ package ss19_case_study.model.facility;
 import java.util.Objects;
 
 public abstract class Facility {
-    private String serviceCode;
-    private String serviceName;
+    private String facilityCode;
+    private String facilityName;
     private int areaUse;
     private float rentalCost;
     private int maxNumberOfTenants;
     private String typesOfRent;
 
     public Facility(String serviceCode, String serviceName, int areaUse, float rentalCost, int maxNumberOfTenants, String typesOfRent) {
-        this.serviceCode = serviceCode;
-        this.serviceName = serviceName;
+        this.facilityCode = serviceCode;
+        this.facilityName = serviceName;
         this.areaUse = areaUse;
         this.rentalCost = rentalCost;
         this.maxNumberOfTenants = maxNumberOfTenants;
@@ -24,28 +24,28 @@ public abstract class Facility {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Facility facility = (Facility) o;
-        return Objects.equals(serviceCode, facility.serviceCode);
+        return Objects.equals(facilityCode, facility.facilityCode);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(serviceCode);
+        return Objects.hash(facilityCode);
     }
 
-    public String getServiceCode() {
-        return serviceCode;
+    public String getFacilityCode() {
+        return facilityCode;
     }
 
-    public void setServiceCode(String serviceCode) {
-        this.serviceCode = serviceCode;
+    public void setFacilityCode(String facilityCode) {
+        this.facilityCode = facilityCode;
     }
 
-    public String getServiceName() {
-        return serviceName;
+    public String getFacilityName() {
+        return facilityName;
     }
 
-    public void setServiceName(String serviceName) {
-        this.serviceName = serviceName;
+    public void setFacilityName(String facilityName) {
+        this.facilityName = facilityName;
     }
 
     public int getAreaUse() {
@@ -83,8 +83,8 @@ public abstract class Facility {
     @Override
     public String toString() {
         return "Facility{" +
-                "serviceCode='" + serviceCode + '\'' +
-                ", serviceName='" + serviceName + '\'' +
+                "serviceCode='" + facilityCode + '\'' +
+                ", serviceName='" + facilityName + '\'' +
                 ", areaUse='" + areaUse + '\'' +
                 ", rentalCost=" + rentalCost +
                 ", maxNumberOfTenants=" + maxNumberOfTenants +
