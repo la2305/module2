@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class EmployeeService implements IEmployeeService {
-    private Scanner scanner = new Scanner(System.in);
+    private static Scanner scanner = new Scanner(System.in);
     private static IEmployeeRepository employeeRepository = new EmployeeRepository();
 
     @Override
@@ -193,7 +193,7 @@ public class EmployeeService implements IEmployeeService {
 
 
     @Override
-    public void editEmployee() {
+    public  void editEmployee() {
         System.out.println("Enter id of employee you want to delete");
         String id = scanner.nextLine();
         Employee employee = employeeRepository.getByIdEmployee(id);

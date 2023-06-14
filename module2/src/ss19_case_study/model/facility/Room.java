@@ -1,7 +1,7 @@
 package ss19_case_study.model.facility;
 
 public class Room extends Facility{
-    private String serviceFreeInclude;
+    private  String serviceFreeInclude;
 
     public Room(String serviceCode, String serviceName, int areaUse, float rentalCost, int maxNumberOfTenants, String typesOfRent, String serviceFreeInclude) {
         super(serviceCode, serviceName, areaUse, rentalCost, maxNumberOfTenants, typesOfRent);
@@ -17,8 +17,8 @@ public class Room extends Facility{
     }
 
     @Override
-    public String toString() {
-        return super.toString()+"Room{" +
+    public  String toString() {
+        return super.toString()+"Room{" +serviceFreeInclude+
                 "serviceFreeInclude='" + serviceFreeInclude + '\'' +
                 '}';
     }

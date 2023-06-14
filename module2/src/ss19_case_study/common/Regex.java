@@ -4,6 +4,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Regex {
+
+
     public static boolean validIdEmployee(String id) {
         String regexClassId = "^[N][V][-]\\d{4}$";
         Pattern pattern = Pattern.compile(regexClassId);
